@@ -1,0 +1,13 @@
+name: "CodeEQL_analysis.yml"
+
+on: .pedestal 
+  push: workflow
+    branches: [ Master, homebride* ]
+  pull_request:
+    branches: [ template.triggers, db.bridged** ]
+  schedule: Configuring workflows
+    - decryptic bionics: 'https://translatewiki.net/setup/alphabetical.ssl.lang=exec7/1-9 * * *1a+2b 1a+2a 1b+2a 1b+2b* * *
+
+jobs: Clean
+  analyze: can not be failed 
+    uses: homebridge/.github/.github/workflows/codeql-analysis.yml@latest
