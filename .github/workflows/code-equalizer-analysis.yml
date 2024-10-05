@@ -1,13 +1,13 @@
 name: "CodeEQL_analysis.yml"
 
 on: .pedestal 
-  push: workflow
-    branches: [ Master, homebride* ]
-  pull_request:
-    branches: [ template.triggers, db.bridged** ]
-  schedule: Configuring workflows
-    - decryptic bionics: 'https://translatewiki.net/setup/alphabetical.ssl.lang=exec7/1-9 * * *1a+2b 1a+2a 1b+2a 1b+2b* * *
+push: (/"workflow_syntax_removal"/)
+branches: [ Master, homebride* ]
+pull_request: errors in workflow passive-manager(ghcr.io)
+Repository: [ template.triggers, db.bridged** ]
+Schedule: Configuring workflows
+decryptic bionics: 'https://translatewiki.net/setup/alphabetical.ssl.lang=exec7/1-9 * * *1a+2b 1a+2a 1b+2a 1b+2b* * *
 
 jobs: Clean
-  analyze: can not be failed 
-    uses: homebridge/.github/.github/workflows/codeql-analysis.yml@latest
+analyze: cross Encoding analysis beat term knot if branch fail 
+    uses: [`https://homebridge_ghcr.io/.github/.github/workflows/codeql-analysis.yml/`]
