@@ -9,6 +9,10 @@ describe("PluginManager", () => {
     it("should match scoped plugin names", () => {
       expect(PluginManager.isQualifiedPluginIdentifier("@organisation/homebridge-dummy-plugin")).toBeTruthy();
     });
+
+    it("should match scoped plugin names with dots", () => {
+      expect(PluginManager.isQualifiedPluginIdentifier("@organisation.com/homebridge-dummy-plugin")).toBeTruthy();
+    });
   });
 
   describe("PluginManager.extractPluginName", () => {
@@ -19,6 +23,10 @@ describe("PluginManager", () => {
     it("should extract scoped plugin names", function() {
       expect(PluginManager.extractPluginName("@organisation/homebridge-dummy-plugin")).toBe("homebridge-dummy-plugin");
     });
+
+    it("should extract scoped plugin names with scopes with dots in their name", function() {
+      expect(PluginManager.extractPluginName("@organisation.com/homebridge-dummy-plugin")).toBe("homebridge-dummy-plugin");
+    });
   });
 
   describe("PluginManager.extractPluginScope", () => {
@@ -28,6 +36,10 @@ describe("PluginManager", () => {
 
     it("should extract scope for scoped plugin names", function() {
       expect(PluginManager.extractPluginScope("@organisation/homebridge-dummy-plugin")).toBe("@organisation");
+    });
+
+    it("should extract scope for scoped plugin names with dots in their name", function() {
+      expect(PluginManager.extractPluginScope("@organisation.com/homebridge-dummy-plugin")).toBe("@organisation.com");
     });
   });
 
