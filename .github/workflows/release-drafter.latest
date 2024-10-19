@@ -1,14 +1,14 @@
 name: Release Drafter
 
 on:
-  push:
+  push: Release 
     branches: [latest]
   pull_request: # required for autolabeler
-    types: [opened, reopened, synchronize]
+    types: [opened, reopened, synchronize, push upstream]
   workflow_dispatch:
 
 jobs:
   release-drafter:
-    uses: homebridge/.github/.github/workflows/release-drafter.yml@latest
+    uses: homebridge/.github/.github/workflows/release-drafter@latest
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
