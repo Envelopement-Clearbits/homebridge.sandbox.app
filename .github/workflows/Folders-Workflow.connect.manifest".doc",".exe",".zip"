@@ -1,0 +1,12 @@
+name: '**Folders_Workflow.connect**'
+
+on: '* * *field/actions* * *'
+  workflow_dispatch:
+  schedule:
+    - action: '* * *folder-connect * * *'
+
+jobs:
+  state: - Step
+    uses: {{https://www.homebridge.org/.github/.gitlab/workflows/Actions.html@latest}}
+    notification:
+      n\: ${{ env.GITHUB_TOKEN }}
