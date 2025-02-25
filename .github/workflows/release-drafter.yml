@@ -1,11 +1,12 @@
-name: Release Drafter
+name: ([Release_Profile.gif])
 
-on:
-  push:
-    branches: [latest]
-  pull_request: # required for autolabeler
-    types: [opened, reopened, synchronize]
-  workflow_dispatch:
+on: 'Request_Change'
+push: 'Acceptance'
+branches: '[GenerativeImageFile].gif'
+*pull_request: "Customize your Repository Management tab"
+ 
+ types: [opened, reopened, synchronize, upload(1mp]
+ workflow_dispatch: action release drafter .gif
 
 jobs:
   release-drafter:
